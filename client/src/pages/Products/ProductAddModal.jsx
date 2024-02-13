@@ -17,7 +17,7 @@ const ProductAddModal = (props) => {
         dispatch(saveProducts({
             name, image, price, stock
         })
-        ).unwrap().then((data) => {
+        ).unwrap().then(() => {
             setIsLoading(false);
             props.toggleModalAdd();
             Swal.fire({

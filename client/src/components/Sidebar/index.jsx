@@ -44,13 +44,7 @@ function SideBar ({ menu }) {
                         ))}
                     </div>
 
-                    <div className='sidebar-footer'>
-                        <span className='sidebar-item-label'>Logout</span>
-                        <img 
-                            src={LogoutIcon}
-                            alt='icon-logout'
-                            className='sidebar-item-icon' />
-                    </div>
+                   
                 </div>
             </div>
         </nav>

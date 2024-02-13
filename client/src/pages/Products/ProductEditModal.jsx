@@ -64,9 +64,7 @@ const ProductEditModal = (props) => {
 
                         <label>Image</label>
                         <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-
-
-
+                        
                         <input type="submit" value="Submit" disabled={isLoading} />
                     </form>
                 </div>

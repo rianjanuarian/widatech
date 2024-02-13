@@ -10,11 +10,12 @@ const sidebar_menu = [
         path: '/',
         title: 'Dashboard',
     },
+   
     {
         id: 2,
         icon: ProductIcon,
-        path: '/orders',
-        title: 'Orders',
+        path: '/invoices',
+        title: 'Invoices',
     },
     {
         id: 3,
@@ -22,12 +23,7 @@ const sidebar_menu = [
         path: '/products',
         title: 'Products',
     },
-    {
-        id: 4,
-        icon: UserIcon,
-        path: '/profile',
-        title: 'My account',
-    }
+   
 ]
 
 export default sidebar_menu;

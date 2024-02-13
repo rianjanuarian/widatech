@@ -2,7 +2,6 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import DashboardHeader from '../../components/DashboardHeader';
 
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
 import '../styles.css';
 import { imageAddress } from '../../api/apiList';
 import { useSelector, useDispatch } from "react-redux";
@@ -31,11 +30,10 @@ const Products = () => {
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
   const paginate = (pageNumber) => {
-
-
     const nextPage = Math.min(pageNumber, totalPages);
     setCurrentPage(nextPage);
-  }; useEffect(() => {
+  };
+   useEffect(() => {
     dispatch(getProducts())
 
 
@@ -103,7 +101,7 @@ const Products = () => {
                       </span>
                     </td>
                     <td><span>{e.stock}</span></td>
-                    <td><span>{e.price}</span></td>
+                    <td><span>${e.price}</span></td>
                     <td>
                       <div>
                         <button

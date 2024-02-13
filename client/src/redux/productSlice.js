@@ -48,6 +48,14 @@ export const updateProducts = createAsyncThunk(
   }
 );
 
+export const suggestionProducts = createAsyncThunk(
+  "products/suggestion",
+  async (name) => {
+    const response = await axios.get(`${productsAPI}/suggestion?name=${name}`);
+
+    return response.data;
+  }
+);
 const productEntity = createEntityAdapter({
   selectId: (products) => products.id,
 });
@@ -80,6 +88,9 @@ const productSlice = createSlice({
         id: action.payload.id,
         changes: action.payload.data,
       });
+    });
+    builder.addCase(suggestionProducts.fulfilled, (state, action) => {
+      productEntity.setAll(state, action.payload);
     });
   },
 });

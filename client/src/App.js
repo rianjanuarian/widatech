@@ -5,10 +5,11 @@ import SideBar from "./components/Sidebar";
 import sidebar_menu from "./constants/sidebar-menu";
 
 import "./App.css";
-import Orders from "./pages/Orders";
 
+import TimeSeriesGraph from "./pages/Dashboard/TimeSeriesGraph";
 import Products from "./pages/Products/Product";
-import AddProduct from "./pages/Products/ProductAddModal";
+import Invoices from "./pages/Invoices/Invoices";
+import InvoiceCard from "./pages/Invoices/InvoiceCard";
 function App() {
   return (
     <Router>
@@ -18,10 +19,13 @@ function App() {
         <div className="dashboard-body">
           <Routes>
             <Route path="*" element={<div></div>} />
-            <Route exact path="/" element={<div></div>} />
-            <Route exact path="/orders" element={<Orders />} />
+            <Route exact path="/" element={<TimeSeriesGraph></TimeSeriesGraph>} />
+     
             <Route exact path="/products" element={<Products />} />
-            <Route exact path="/addProduct" element={<AddProduct/>} />
+            <Route exact path="/invoices" element={<Invoices />} />
+            <Route path="detail">
+              <Route path=":id" element={<InvoiceCard></InvoiceCard>}></Route>
+            </Route>
           </Routes>
         </div>
       </div>

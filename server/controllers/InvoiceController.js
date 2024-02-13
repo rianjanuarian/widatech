@@ -53,5 +53,14 @@ class InvoiceController {
       res.json(error);
     }
   }
+  static async detail(req,res){
+    try {
+      const id = +req.params.id
+      let result = await invoice.findByPk(id,{include:[product]})
+      res.json(result)
+    } catch (error) {
+      res.json(error)
+    }
+  }
 }
 module.exports = InvoiceController;
