@@ -20,7 +20,6 @@ function App() {
           <Routes>
             <Route path="*" element={<div></div>} />
             <Route exact path="/" element={<TimeSeriesGraph></TimeSeriesGraph>} />
-     
             <Route exact path="/products" element={<Products />} />
             <Route exact path="/invoices" element={<Invoices />} />
             <Route path="detail">

@@ -141,11 +141,7 @@ const Products = () => {
             toggleModalEdit= {toggleModalEdit}
             productId={productId}/>}
           </>
-
         )}
-
-
-
       </div>
     </div>
 
