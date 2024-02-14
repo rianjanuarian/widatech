@@ -32,7 +32,7 @@ export default function App() {
   useEffect(() => {
     if (status === "success") {
       setChartData({
-        labels: invoices.map((data) => data.createdAt.slice(0, 4)),
+        labels: invoices.map((data) => data.createdAt.slice(0, 10)),
         datasets: [
           {
             label: "Users Gained ",

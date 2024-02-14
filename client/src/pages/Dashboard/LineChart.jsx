@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+
 function LineChart({ chartData }) {
   return (
     <div className="chart-container">
@@ -14,6 +15,17 @@ function LineChart({ chartData }) {
             },
             legend: {
               display: false
+            },
+            zoom: {
+              zoom: {
+                wheel: {
+                  enabled: true,
+                },
+                pinch: {
+                  enabled: false
+                },
+                mode: 'xy'
+              }
             }
           }
         }}
@@ -21,4 +33,5 @@ function LineChart({ chartData }) {
     </div>
   );
 }
+
 export default LineChart;
